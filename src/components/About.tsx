@@ -61,7 +61,7 @@ const About = () => {
           </div>
 
           <div className="space-y-8">
-            <div className="p-8 rounded-2xl" style={{ backgroundColor: '#D7CCC8' }}>
+            <div className="p-8 rounded-2xl" style={{ backgroundColor: '#F8BBD9' }}>
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Areas of Expertise</h3>
               <div className="space-y-6">
                 {expertise.map((item, index) => (
@@ -78,7 +78,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="text-white p-6 rounded-xl" style={{ backgroundColor: '#A1887F' }}>
+            <div className="text-white p-6 rounded-xl" style={{ backgroundColor: '#E91E63' }}>
               <h4 className="text-lg font-semibold mb-2">My Philosophy</h4>
               <p className="text-gray-100">
                 "True healing comes from addressing the whole person - mind, body, and spirit. 

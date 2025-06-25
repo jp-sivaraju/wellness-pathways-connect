@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -77,7 +76,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="border-l-4 shadow-sm" style={{ borderLeftColor: '#A1887F' }}>
+                <Card key={index} className="border-l-4 shadow-sm" style={{ borderLeftColor: '#E91E63' }}>
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
@@ -98,7 +97,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="mt-8 p-6 rounded-xl text-white" style={{ background: 'linear-gradient(135deg, #A1887F 0%, #8D6E63 100%)' }}>
+            <div className="mt-8 p-6 rounded-xl text-white" style={{ background: 'linear-gradient(135deg, #E91E63 0%, #AD1457 100%)' }}>
               <h4 className="text-xl font-bold mb-4">Why Choose Dr. Prathusha?</h4>
               <ul className="space-y-2">
                 <li className="flex items-center">
@@ -209,7 +208,7 @@ const Contact = () => {
                   <Button 
                     type="submit" 
                     className="w-full text-white py-3 hover:opacity-90"
-                    style={{ backgroundColor: '#A1887F' }}
+                    style={{ backgroundColor: '#E91E63' }}
                     size="lg"
                   >
                     Send Message

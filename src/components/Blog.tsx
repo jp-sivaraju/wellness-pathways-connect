@@ -81,7 +81,8 @@ const Blog = () => {
             <Button
               key={index}
               variant={index === 0 ? "default" : "outline"}
-              className={index === 0 ? "bg-gray-700 hover:bg-gray-800" : "border-gray-600 text-gray-700 hover:bg-gray-100"}
+              className={index === 0 ? "text-white" : "text-gray-700 hover:bg-gray-100"}
+              style={index === 0 ? { backgroundColor: '#E91E63' } : { borderColor: '#E91E63' }}
             >
               {category}
             </Button>
@@ -110,7 +111,7 @@ const Blog = () => {
                         className="w-full h-48 object-cover"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg" style={{ backgroundColor: '#A1887F' }}>
+                        <span className="text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg" style={{ backgroundColor: '#E91E63' }}>
                           {post.category}
                         </span>
                       </div>
@@ -136,8 +137,7 @@ const Blog = () => {
                       <Button 
                         variant="ghost" 
                         className="w-full text-gray-700 hover:text-white p-3 justify-center hover:shadow-md transition-all duration-300"
-                        style={{ '--tw-bg-opacity': '0', ':hover': { backgroundColor: '#A1887F' } }}
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A1887F'}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E91E63'}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                       >
                         Read Full Article
@@ -157,7 +157,7 @@ const Blog = () => {
           <Button 
             size="lg" 
             className="text-white px-8 py-4 rounded-full hover:opacity-90 shadow-lg"
-            style={{ backgroundColor: '#A1887F' }}
+            style={{ backgroundColor: '#E91E63' }}
           >
             View All Articles
           </Button>

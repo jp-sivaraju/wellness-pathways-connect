@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="py-20" style={{ backgroundColor: '#D7CCC8' }}>
+    <section id="home" className="py-20" style={{ backgroundColor: '#FCE4EC' }}>
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -37,7 +37,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="text-white px-8 py-4 rounded-full hover:opacity-90"
-                style={{ backgroundColor: '#A1887F' }}
+                style={{ backgroundColor: '#E91E63' }}
                 onClick={handleConsultationClick}
               >
                 Book Consultation
@@ -80,11 +80,11 @@ const Hero = () => {
 
           <div className="lg:pl-12">
             <div className="relative">
-              <div className="absolute inset-0 rounded-3xl transform rotate-3" style={{ backgroundColor: '#A1887F' }}></div>
+              <div className="absolute inset-0 rounded-3xl transform rotate-3" style={{ backgroundColor: '#E91E63' }}></div>
               <div className="relative bg-white p-8 rounded-3xl shadow-xl">
-                <div className="w-full h-96 rounded-2xl flex items-center justify-center" style={{ backgroundColor: '#D7CCC8' }}>
+                <div className="w-full h-96 rounded-2xl flex items-center justify-center" style={{ backgroundColor: '#F8BBD9' }}>
                   <div className="text-center">
-                    <div className="w-32 h-32 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: '#A1887F' }}>
+                    <div className="w-32 h-32 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: '#E91E63' }}>
                       <span className="text-white text-4xl font-bold">PN</span>
                     </div>
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Dr. Prathusha Nerella</h3>

@@ -62,7 +62,7 @@ const Testimonials = () => {
   );
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-20" style={{ backgroundColor: '#F8BBD9' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -90,7 +90,7 @@ const Testimonials = () => {
                   <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg h-full bg-white">
                     <CardContent className="p-6 h-full flex flex-col">
                       <div className="flex items-center mb-4">
-                        <div className="p-2 rounded-full mr-3" style={{ backgroundColor: '#D7CCC8' }}>
+                        <div className="p-2 rounded-full mr-3" style={{ backgroundColor: '#FCE4EC' }}>
                           <Quote className="text-gray-600" size={20} />
                         </div>
                         <div className="flex">
@@ -112,7 +112,7 @@ const Testimonials = () => {
                         <p className="text-sm text-gray-600 font-medium mb-3">
                           Condition: {testimonial.condition}
                         </p>
-                        <div className="p-3 rounded-lg shadow-inner" style={{ backgroundColor: '#D7CCC8' }}>
+                        <div className="p-3 rounded-lg shadow-inner" style={{ backgroundColor: '#FCE4EC' }}>
                           <p className="text-sm text-gray-700 font-medium">
                             <span className="font-semibold">Outcome:</span> {testimonial.outcome}
                           </p>
@@ -129,7 +129,7 @@ const Testimonials = () => {
         </div>
 
         <div className="text-center mt-12">
-          <div className="text-white p-8 rounded-2xl max-w-4xl mx-auto shadow-xl" style={{ backgroundColor: '#A1887F' }}>
+          <div className="text-white p-8 rounded-2xl max-w-4xl mx-auto shadow-xl" style={{ backgroundColor: '#E91E63' }}>
             <h3 className="text-2xl font-bold mb-4">Join Hundreds of Satisfied Patients</h3>
             <p className="text-gray-100 text-lg mb-6">
               Start your journey to better health today with personalized care that addresses your unique needs.

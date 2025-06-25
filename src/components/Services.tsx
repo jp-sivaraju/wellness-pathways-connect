@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -51,7 +50,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20" style={{ backgroundColor: '#F8BBD9' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -86,7 +85,7 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-gray-700 hover:bg-gray-800 text-white">
+                <Button className="w-full text-white" style={{ backgroundColor: '#E91E63' }}>
                   Book Now
                 </Button>
               </CardContent>
@@ -101,7 +100,8 @@ const Services = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-gray-600 text-gray-700 hover:bg-gray-100"
+            className="text-gray-700 hover:bg-gray-100"
+            style={{ borderColor: '#E91E63' }}
           >
             Schedule a Free Consultation
           </Button>

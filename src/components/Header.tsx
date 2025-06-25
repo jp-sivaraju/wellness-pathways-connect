@@ -29,7 +29,7 @@ const Header = () => {
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style={{ background: '#A1887F' }}>
+            <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style={{ background: '#E91E63' }}>
               PN
             </div>
             <div>

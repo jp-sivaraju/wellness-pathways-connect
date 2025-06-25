@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,6 +52,12 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Light Pink Theme Colors */
+    --light-pink-bg: #FCE4EC;
+    --pink-accent: #E91E63;
+    --soft-pink: #F8BBD9;
+    --deep-pink: #AD1457;
   }
 
   .dark {

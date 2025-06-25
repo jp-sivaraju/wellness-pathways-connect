@@ -50,7 +50,7 @@ const InstagramReels = () => {
   );
 
   return (
-    <section className="py-12" style={{ backgroundColor: '#D7CCC8' }}>
+    <section className="py-12" style={{ backgroundColor: '#FCE4EC' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-2 mb-3">
@@ -118,7 +118,7 @@ const InstagramReels = () => {
           <Button 
             size="sm" 
             className="text-white px-6 py-2 rounded-full hover:opacity-90"
-            style={{ backgroundColor: '#A1887F' }}
+            style={{ backgroundColor: '#E91E63' }}
             onClick={() => window.open('https://www.instagram.com/drprathushanerella', '_blank')}
           >
             <Instagram className="mr-2" size={16} />
