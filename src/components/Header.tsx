@@ -15,6 +15,14 @@ const Header = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -33,13 +41,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                onClick={() => handleNavClick(item.href)}
+                className="text-gray-700 hover:text-gray-900 transition-colors font-medium cursor-pointer"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -59,14 +67,13 @@ const Header = () => {
           <nav className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-gray-700 hover:text-gray-900 transition-colors font-medium text-left cursor-pointer"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
             </div>
           </nav>

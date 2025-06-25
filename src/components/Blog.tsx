@@ -2,7 +2,9 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const Blog = () => {
   const blogPosts = [
@@ -58,6 +60,10 @@ const Blog = () => {
 
   const categories = ["All", "Diabetes Management", "Mental Health", "Holistic Health", "Lifestyle Medicine"];
 
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
+
   return (
     <section id="blog" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -82,54 +88,76 @@ const Blog = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-              <div className="relative">
-                <img 
-                  src={post.image} 
-                  alt={post.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {post.category}
-                  </span>
-                </div>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-lg text-gray-900 line-clamp-2">{post.title}</CardTitle>
-                <CardDescription className="text-gray-600 line-clamp-3">
-                  {post.excerpt}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <div className="flex items-center space-x-2">
-                    <Calendar size={16} />
-                    <span>{post.date}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Clock size={16} />
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
-                <Button 
-                  variant="ghost" 
-                  className="w-full text-gray-700 hover:text-gray-900 hover:bg-gray-100 p-0 justify-start"
-                >
-                  Read More
-                  <ArrowRight size={16} className="ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="relative">
+          <Carousel
+            plugins={[plugin.current]}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {blogPosts.map((post, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                  <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full">
+                    <div className="relative">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg" style={{ backgroundColor: '#A1887F' }}>
+                          {post.category}
+                        </span>
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                    </div>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-lg text-gray-900 line-clamp-2 leading-tight">{post.title}</CardTitle>
+                      <CardDescription className="text-gray-600 line-clamp-3 text-sm">
+                        {post.excerpt}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                        <div className="flex items-center space-x-2">
+                          <Calendar size={14} />
+                          <span>{post.date}</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Clock size={14} />
+                          <span>{post.readTime}</span>
+                        </div>
+                      </div>
+                      <Button 
+                        variant="ghost" 
+                        className="w-full text-gray-700 hover:text-white p-3 justify-center hover:shadow-md transition-all duration-300"
+                        style={{ '--tw-bg-opacity': '0', ':hover': { backgroundColor: '#A1887F' } }}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A1887F'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                      >
+                        Read Full Article
+                        <ArrowRight size={16} className="ml-2" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 bg-white border-gray-300 hover:bg-gray-100 shadow-lg" />
+            <CarouselNext className="hidden md:flex -right-12 bg-white border-gray-300 hover:bg-gray-100 shadow-lg" />
+          </Carousel>
         </div>
 
         <div className="text-center mt-12">
           <Button 
             size="lg" 
-            className="bg-gray-700 hover:bg-gray-800 text-white px-8"
+            className="text-white px-8 py-4 rounded-full hover:opacity-90 shadow-lg"
+            style={{ backgroundColor: '#A1887F' }}
           >
             View All Articles
           </Button>

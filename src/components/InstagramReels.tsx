@@ -50,21 +50,21 @@ const InstagramReels = () => {
   );
 
   return (
-    <section className="py-20" style={{ backgroundColor: '#D7CCC8' }}>
+    <section className="py-12" style={{ backgroundColor: '#D7CCC8' }}>
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Instagram className="text-gray-600" size={32} />
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+        <div className="text-center mb-8">
+          <div className="flex items-center justify-center space-x-2 mb-3">
+            <Instagram className="text-gray-600" size={24} />
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
               Health & Wellness Insights
             </h2>
           </div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Follow our latest health tips, wellness advice, and expert insights on Instagram
+          <p className="text-gray-600 max-w-xl mx-auto">
+            Follow our latest health tips and wellness advice
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative max-w-4xl mx-auto">
           <Carousel
             plugins={[plugin.current]}
             opts={{
@@ -77,55 +77,51 @@ const InstagramReels = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {reels.map((reel) => (
-                <CarouselItem key={reel.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <div className="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div className="aspect-[9/16] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative overflow-hidden">
-                      {/* Instagram Reel Embed Placeholder */}
+                <CarouselItem key={reel.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="group relative bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="aspect-[4/5] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      <div className="relative z-10 text-center p-6">
-                        <Instagram className="text-white mb-4 mx-auto" size={48} />
-                        <h3 className="text-white font-semibold text-lg mb-2">{reel.title}</h3>
-                        <p className="text-gray-200 text-sm">{reel.description}</p>
+                      <div className="relative z-10 text-center p-4">
+                        <Instagram className="text-white mb-2 mx-auto" size={32} />
+                        <h3 className="text-white font-semibold text-sm mb-1">{reel.title}</h3>
+                        <p className="text-gray-200 text-xs">{reel.description}</p>
                       </div>
                       
-                      {/* Overlay with play button effect */}
                       <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                          <ExternalLink className="text-white" size={24} />
+                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                          <ExternalLink className="text-white" size={18} />
                         </div>
                       </div>
                     </div>
                     
-                    <div className="p-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">{reel.title}</h4>
-                      <p className="text-gray-600 text-sm mb-4">{reel.description}</p>
+                    <div className="p-3">
                       <Button 
                         variant="outline" 
                         size="sm" 
-                        className="w-full border-gray-600 text-gray-700 hover:bg-gray-100"
+                        className="w-full border-gray-300 text-gray-700 hover:bg-gray-100 text-xs py-1"
                         onClick={() => window.open(reel.url, '_blank')}
                       >
-                        <Instagram className="mr-2" size={16} />
-                        Watch on Instagram
+                        <Instagram className="mr-1" size={12} />
+                        Watch
                       </Button>
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-white border-gray-300 hover:bg-gray-100" />
-            <CarouselNext className="hidden md:flex -right-12 bg-white border-gray-300 hover:bg-gray-100" />
+            <CarouselPrevious className="hidden md:flex -left-8 bg-white border-gray-300 hover:bg-gray-100 w-6 h-6" />
+            <CarouselNext className="hidden md:flex -right-8 bg-white border-gray-300 hover:bg-gray-100 w-6 h-6" />
           </Carousel>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <Button 
-            size="lg" 
-            className="text-white px-8 py-4 rounded-full hover:opacity-90"
+            size="sm" 
+            className="text-white px-6 py-2 rounded-full hover:opacity-90"
             style={{ backgroundColor: '#A1887F' }}
             onClick={() => window.open('https://www.instagram.com/drprathushanerella', '_blank')}
           >
-            <Instagram className="mr-2" size={20} />
+            <Instagram className="mr-2" size={16} />
             Follow on Instagram
           </Button>
         </div>

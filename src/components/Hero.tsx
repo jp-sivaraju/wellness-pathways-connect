@@ -4,6 +4,20 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Heart, Users, Award } from 'lucide-react';
 
 const Hero = () => {
+  const handleConsultationClick = () => {
+    const contactElement = document.querySelector('#contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleLearnMoreClick = () => {
+    const aboutElement = document.querySelector('#about');
+    if (aboutElement) {
+      aboutElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="py-20" style={{ backgroundColor: '#D7CCC8' }}>
       <div className="container mx-auto px-4">
@@ -24,6 +38,7 @@ const Hero = () => {
                 size="lg" 
                 className="text-white px-8 py-4 rounded-full hover:opacity-90"
                 style={{ backgroundColor: '#A1887F' }}
+                onClick={handleConsultationClick}
               >
                 Book Consultation
                 <ArrowRight className="ml-2" size={20} />
@@ -32,6 +47,7 @@ const Hero = () => {
                 variant="outline" 
                 size="lg" 
                 className="border-gray-600 text-gray-700 hover:bg-gray-100 px-8 py-4 rounded-full"
+                onClick={handleLearnMoreClick}
               >
                 Learn More
               </Button>
