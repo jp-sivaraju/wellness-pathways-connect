@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin, Heart, Youtube } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,6 +29,27 @@ const Footer = () => {
     'Exercise Plans',
     'Mental Wellness',
     'Success Stories',
+  ];
+
+  const socialLinks = [
+    {
+      name: 'YouTube',
+      icon: <Youtube size={20} />,
+      url: 'https://www.youtube.com/@pravehaintegrative',
+      handle: '@pravehaintegrative'
+    },
+    {
+      name: 'Instagram',
+      icon: <Instagram size={20} />,
+      url: 'https://www.instagram.com/drprathushanerella',
+      handle: '@drprathushanerella'
+    },
+    {
+      name: 'Facebook',
+      icon: <Facebook size={20} />,
+      url: 'https://www.facebook.com/drprathushanerella/',
+      handle: 'Dr. Prathusha Nerella'
+    }
   ];
 
   return (
@@ -95,31 +116,38 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Resources</h4>
-            <ul className="space-y-2">
-              {resources.map((resource, index) => (
-                <li key={index}>
-                  <span className="text-gray-400">{resource}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="pt-4">
-              <h5 className="text-sm font-semibold text-white mb-3">Follow Us</h5>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors">
-                  <Facebook size={20} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors">
-                  <Instagram size={20} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors">
-                  <Twitter size={20} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors">
-                  <Linkedin size={20} />
-                </a>
+          {/* Social Media & Resources */}
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-white">Resources</h4>
+              <ul className="space-y-2">
+                {resources.slice(0, 4).map((resource, index) => (
+                  <li key={index}>
+                    <span className="text-gray-400">{resource}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-white">Connect With Us</h4>
+              <div className="space-y-3">
+                {socialLinks.map((social, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <a 
+                      href={social.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-3 text-gray-400 hover:text-gray-200 transition-colors group"
+                    >
+                      {social.icon}
+                      <div className="flex flex-col">
+                        <span className="text-sm font-medium">{social.name}</span>
+                        <span className="text-xs text-gray-500">{social.handle}</span>
+                      </div>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
