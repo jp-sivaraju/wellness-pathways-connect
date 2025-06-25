@@ -8,11 +8,10 @@ import InstagramReels from '@/components/InstagramReels';
 import Blog from '@/components/Blog';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: '#D7CCC8' }}>
       <Header />
       <Hero />
       <About />
@@ -21,7 +20,6 @@ const Index = () => {
       <Blog />
       <Testimonials />
       <Contact />
-      <Footer />
     </div>
   );
 };

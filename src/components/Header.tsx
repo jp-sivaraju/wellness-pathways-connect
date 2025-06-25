@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -18,27 +18,10 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        {/* Top bar */}
-        <div className="flex justify-between items-center py-2 text-sm text-gray-600 border-b border-gray-200">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Phone size={16} />
-              <span>+91 98765 43210</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail size={16} />
-              <span>contact@drprathushanerella.com</span>
-            </div>
-          </div>
-          <div className="hidden md:block">
-            <span>Available for Online Consultations</span>
-          </div>
-        </div>
-
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style={{ background: '#A1887F' }}>
               PN
             </div>
             <div>

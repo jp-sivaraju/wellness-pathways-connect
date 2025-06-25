@@ -5,7 +5,7 @@ import { ArrowRight, Heart, Users, Award } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="bg-gradient-to-br from-gray-50 to-gray-100 py-20">
+    <section id="home" className="py-20" style={{ backgroundColor: '#D7CCC8' }}>
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -22,7 +22,8 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-gray-700 hover:bg-gray-800 text-white px-8 py-4 rounded-full"
+                className="text-white px-8 py-4 rounded-full hover:opacity-90"
+                style={{ backgroundColor: '#A1887F' }}
               >
                 Book Consultation
                 <ArrowRight className="ml-2" size={20} />
@@ -63,11 +64,11 @@ const Hero = () => {
 
           <div className="lg:pl-12">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-300 to-gray-400 rounded-3xl transform rotate-3"></div>
+              <div className="absolute inset-0 rounded-3xl transform rotate-3" style={{ backgroundColor: '#A1887F' }}></div>
               <div className="relative bg-white p-8 rounded-3xl shadow-xl">
-                <div className="w-full h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center">
+                <div className="w-full h-96 rounded-2xl flex items-center justify-center" style={{ backgroundColor: '#D7CCC8' }}>
                   <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <div className="w-32 h-32 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: '#A1887F' }}>
                       <span className="text-white text-4xl font-bold">PN</span>
                     </div>
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Dr. Prathusha Nerella</h3>
