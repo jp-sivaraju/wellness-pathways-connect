@@ -72,7 +72,7 @@ const Testimonials = () => {
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Quote className="text-emerald-600 mr-2" size={24} />
+                  <Quote className="text-gray-600 mr-2" size={24} />
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="text-yellow-400 fill-current" size={16} />
@@ -89,11 +89,11 @@ const Testimonials = () => {
                     <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                     <span className="text-sm text-gray-500">{testimonial.location}</span>
                   </div>
-                  <p className="text-sm text-emerald-600 font-medium mb-2">
+                  <p className="text-sm text-gray-600 font-medium mb-2">
                     Condition: {testimonial.condition}
                   </p>
-                  <div className="bg-emerald-50 p-3 rounded-lg">
-                    <p className="text-sm text-emerald-700 font-medium">
+                  <div className="p-3 rounded-lg" style={{ backgroundColor: '#D7CCC8' }}>
+                    <p className="text-sm text-gray-700 font-medium">
                       Outcome: {testimonial.outcome}
                     </p>
                   </div>
@@ -104,23 +104,23 @@ const Testimonials = () => {
         </div>
 
         <div className="text-center mt-12">
-          <div className="bg-emerald-600 text-white p-8 rounded-2xl max-w-4xl mx-auto">
+          <div className="text-white p-8 rounded-2xl max-w-4xl mx-auto" style={{ backgroundColor: '#A1887F' }}>
             <h3 className="text-2xl font-bold mb-4">Join Hundreds of Satisfied Patients</h3>
-            <p className="text-emerald-100 text-lg mb-6">
+            <p className="text-gray-100 text-lg mb-6">
               Start your journey to better health today with personalized care that addresses your unique needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="text-center">
                 <div className="text-3xl font-bold">500+</div>
-                <div className="text-emerald-100">Happy Patients</div>
+                <div className="text-gray-100">Happy Patients</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold">95%</div>
-                <div className="text-emerald-100">Success Rate</div>
+                <div className="text-gray-100">Success Rate</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold">4.9/5</div>
-                <div className="text-emerald-100">Average Rating</div>
+                <div className="text-gray-100">Average Rating</div>
               </div>
             </div>
           </div>

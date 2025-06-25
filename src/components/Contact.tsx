@@ -35,25 +35,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Phone className="text-emerald-600" size={24} />,
+      icon: <Phone className="text-gray-600" size={24} />,
       title: "Phone",
       details: ["+91 98765 43210", "+91 87654 32109"],
       description: "Available Mon-Sat, 9 AM - 7 PM"
     },
     {
-      icon: <Mail className="text-emerald-600" size={24} />,
+      icon: <Mail className="text-gray-600" size={24} />,
       title: "Email",
       details: ["contact@drprathushanerella.com", "appointments@drprathushanerella.com"],
       description: "We'll respond within 24 hours"
     },
     {
-      icon: <MapPin className="text-emerald-600" size={24} />,
+      icon: <MapPin className="text-gray-600" size={24} />,
       title: "Location",
       details: ["Hyderabad, Telangana, India"],
       description: "Online consultations available worldwide"
     },
     {
-      icon: <Clock className="text-emerald-600" size={24} />,
+      icon: <Clock className="text-gray-600" size={24} />,
       title: "Consultation Hours",
       details: ["Mon-Fri: 9:00 AM - 6:00 PM", "Sat: 9:00 AM - 2:00 PM"],
       description: "Emergency consultations available"
@@ -77,7 +77,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="border-l-4 border-l-emerald-600 shadow-sm">
+                <Card key={index} className="border-l-4 shadow-sm" style={{ borderLeftColor: '#A1887F' }}>
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
@@ -98,7 +98,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl text-white">
+            <div className="mt-8 p-6 rounded-xl text-white" style={{ background: 'linear-gradient(135deg, #A1887F 0%, #8D6E63 100%)' }}>
               <h4 className="text-xl font-bold mb-4">Why Choose Dr. Prathusha?</h4>
               <ul className="space-y-2">
                 <li className="flex items-center">
@@ -208,7 +208,8 @@ const Contact = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3"
+                    className="w-full text-white py-3 hover:opacity-90"
+                    style={{ backgroundColor: '#A1887F' }}
                     size="lg"
                   >
                     Send Message
