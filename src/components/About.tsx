@@ -13,17 +13,17 @@ const About = () => {
 
   const expertise = [
     {
-      icon: <Stethoscope className="text-emerald-600" size={32} />,
+      icon: <Stethoscope className="text-gray-600" size={32} />,
       title: "Diabetes Management",
       description: "Comprehensive diabetes care with personalized treatment plans and lifestyle modifications."
     },
     {
-      icon: <Brain className="text-emerald-600" size={32} />,
+      icon: <Brain className="text-gray-600" size={32} />,
       title: "Positive Psychology",
       description: "Mental wellness and emotional balance through evidence-based positive psychology techniques."
     },
     {
-      icon: <Leaf className="text-emerald-600" size={32} />,
+      icon: <Leaf className="text-gray-600" size={32} />,
       title: "Holistic Health",
       description: "Integrative approach combining traditional medicine with natural healing methods."
     }
@@ -53,7 +53,7 @@ const About = () => {
               <h3 className="text-xl font-semibold text-gray-900">Qualifications & Certifications</h3>
               {credentials.map((credential, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="text-emerald-600 flex-shrink-0" size={20} />
+                  <CheckCircle className="text-gray-600 flex-shrink-0" size={20} />
                   <span className="text-gray-700">{credential}</span>
                 </div>
               ))}
@@ -61,7 +61,7 @@ const About = () => {
           </div>
 
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Areas of Expertise</h3>
               <div className="space-y-6">
                 {expertise.map((item, index) => (
@@ -78,9 +78,9 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-emerald-600 text-white p-6 rounded-xl">
+            <div className="bg-gray-700 text-white p-6 rounded-xl">
               <h4 className="text-lg font-semibold mb-2">My Philosophy</h4>
-              <p className="text-emerald-100">
+              <p className="text-gray-200">
                 "True healing comes from addressing the whole person - mind, body, and spirit. 
                 Every patient deserves personalized care that honors their unique journey to wellness."
               </p>

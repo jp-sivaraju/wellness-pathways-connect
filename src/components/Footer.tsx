@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
                 PN
               </div>
               <div>
@@ -52,15 +52,15 @@ const Footer = () => {
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone size={18} className="text-emerald-400" />
+                <Phone size={18} className="text-gray-400" />
                 <span className="text-gray-300">+91 98765 43210</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail size={18} className="text-emerald-400" />
+                <Mail size={18} className="text-gray-400" />
                 <span className="text-gray-300">contact@drprathushanerella.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin size={18} className="text-emerald-400" />
+                <MapPin size={18} className="text-gray-400" />
                 <span className="text-gray-300">Hyderabad, Telangana, India</span>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Footer = () => {
                 <li key={index}>
                   <a 
                     href={link.href} 
-                    className="text-gray-400 hover:text-emerald-400 transition-colors"
+                    className="text-gray-400 hover:text-gray-200 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -108,16 +108,16 @@ const Footer = () => {
             <div className="pt-4">
               <h5 className="text-sm font-semibold text-white mb-3">Follow Us</h5>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors">
                   <Facebook size={20} />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors">
                   <Twitter size={20} />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="#" className="text-gray-400 hover:text-gray-200 transition-colors">
                   <Linkedin size={20} />
                 </a>
               </div>

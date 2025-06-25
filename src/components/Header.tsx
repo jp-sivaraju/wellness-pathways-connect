@@ -19,7 +19,7 @@ const Header = () => {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
         {/* Top bar */}
-        <div className="flex justify-between items-center py-2 text-sm text-emerald-700 border-b border-emerald-100">
+        <div className="flex justify-between items-center py-2 text-sm text-gray-600 border-b border-gray-200">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Phone size={16} />
@@ -38,12 +38,12 @@ const Header = () => {
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            <div className="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
               PN
             </div>
             <div>
-              <h1 className="text-xl font-bold text-emerald-800">Dr. Prathusha Nerella</h1>
-              <p className="text-sm text-emerald-600">MBBS, MD - Diabetes & Lifestyle Expert</p>
+              <h1 className="text-xl font-bold text-gray-800">Dr. Prathusha Nerella</h1>
+              <p className="text-sm text-gray-600">MBBS, MD - Diabetes & Lifestyle Expert</p>
             </div>
           </div>
 
@@ -53,7 +53,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
               >
                 {item.name}
               </a>
@@ -73,13 +73,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-emerald-100">
+          <nav className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+                  className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

@@ -75,7 +75,7 @@ const Blog = () => {
             <Button
               key={index}
               variant={index === 0 ? "default" : "outline"}
-              className={index === 0 ? "bg-emerald-600 hover:bg-emerald-700" : "border-emerald-600 text-emerald-600 hover:bg-emerald-50"}
+              className={index === 0 ? "bg-gray-700 hover:bg-gray-800" : "border-gray-600 text-gray-700 hover:bg-gray-100"}
             >
               {category}
             </Button>
@@ -92,7 +92,7 @@ const Blog = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {post.category}
                   </span>
                 </div>
@@ -116,7 +116,7 @@ const Blog = () => {
                 </div>
                 <Button 
                   variant="ghost" 
-                  className="w-full text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 p-0 justify-start"
+                  className="w-full text-gray-700 hover:text-gray-900 hover:bg-gray-100 p-0 justify-start"
                 >
                   Read More
                   <ArrowRight size={16} className="ml-2" />
@@ -129,7 +129,7 @@ const Blog = () => {
         <div className="text-center mt-12">
           <Button 
             size="lg" 
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8"
+            className="bg-gray-700 hover:bg-gray-800 text-white px-8"
           >
             View All Articles
           </Button>

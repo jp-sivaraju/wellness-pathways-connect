@@ -7,42 +7,42 @@ import { Calendar, Video, Users, BookOpen, Heart, Activity } from 'lucide-react'
 const Services = () => {
   const services = [
     {
-      icon: <Calendar className="text-emerald-600" size={32} />,
+      icon: <Calendar className="text-gray-600" size={32} />,
       title: "Individual Consultations",
       description: "Personalized one-on-one sessions for diabetes management, lifestyle modifications, and holistic health planning.",
       features: ["Comprehensive health assessment", "Personalized treatment plans", "Regular follow-ups", "24/7 support"],
       price: "₹2,000 per session"
     },
     {
-      icon: <Video className="text-emerald-600" size={32} />,
+      icon: <Video className="text-gray-600" size={32} />,
       title: "Online Consultations",
       description: "Convenient virtual consultations from the comfort of your home with the same quality of care.",
       features: ["Video consultations", "Digital prescriptions", "Health monitoring", "Flexible scheduling"],
       price: "₹1,500 per session"
     },
     {
-      icon: <Users className="text-emerald-600" size={32} />,
+      icon: <Users className="text-gray-600" size={32} />,
       title: "Group Workshops",
       description: "Interactive workshops on diabetes management, stress reduction, and healthy lifestyle practices.",
       features: ["Group learning sessions", "Practical demonstrations", "Peer support", "Resource materials"],
       price: "₹500 per workshop"
     },
     {
-      icon: <BookOpen className="text-emerald-600" size={32} />,
+      icon: <BookOpen className="text-gray-600" size={32} />,
       title: "Health Education Programs",
       description: "Comprehensive educational programs for schools, organizations, and community groups.",
       features: ["Custom curriculum", "Interactive presentations", "Health screening", "Follow-up support"],
       price: "Contact for pricing"
     },
     {
-      icon: <Heart className="text-emerald-600" size={32} />,
+      icon: <Heart className="text-gray-600" size={32} />,
       title: "Wellness Coaching",
       description: "Long-term wellness coaching focusing on sustainable lifestyle changes and positive psychology.",
       features: ["Goal setting", "Habit formation", "Mindfulness training", "Progress tracking"],
       price: "₹5,000 per month"
     },
     {
-      icon: <Activity className="text-emerald-600" size={32} />,
+      icon: <Activity className="text-gray-600" size={32} />,
       title: "Corporate Wellness",
       description: "Workplace wellness programs designed to improve employee health and productivity.",
       features: ["Health assessments", "Wellness workshops", "Stress management", "Team building"],
@@ -68,7 +68,7 @@ const Services = () => {
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
                   {service.icon}
-                  <span className="text-sm font-semibold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
+                  <span className="text-sm font-semibold text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
                     {service.price}
                   </span>
                 </div>
@@ -81,12 +81,12 @@ const Services = () => {
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <div className="w-2 h-2 bg-emerald-600 rounded-full mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mr-3 flex-shrink-0"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white">
+                <Button className="w-full bg-gray-700 hover:bg-gray-800 text-white">
                   Book Now
                 </Button>
               </CardContent>
@@ -101,7 +101,7 @@ const Services = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-emerald-600 text-emerald-600 hover:bg-emerald-50"
+            className="border-gray-600 text-gray-700 hover:bg-gray-100"
           >
             Schedule a Free Consultation
           </Button>
