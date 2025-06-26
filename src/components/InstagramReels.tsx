@@ -50,16 +50,16 @@ const InstagramReels = () => {
   );
 
   return (
-    <section className="py-12" style={{ backgroundColor: '#FCE4EC' }}>
+    <section className="py-12" style={{ backgroundColor: '#EFECE6' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-2 mb-3">
-            <Instagram className="text-gray-600" size={24} />
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+            <Instagram style={{ color: '#4A4A45' }} size={24} />
+            <h2 className="text-2xl lg:text-3xl font-bold" style={{ color: '#4A4A45' }}>
               Health & Wellness Insights
             </h2>
           </div>
-          <p className="text-gray-600 max-w-xl mx-auto">
+          <p className="max-w-xl mx-auto" style={{ color: '#4A4A45', opacity: 0.8 }}>
             Follow our latest health tips and wellness advice
           </p>
         </div>
@@ -78,7 +78,7 @@ const InstagramReels = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {reels.map((reel) => (
                 <CarouselItem key={reel.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <div className="group relative bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="group relative rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1" style={{ backgroundColor: '#EFECE6' }}>
                     <div className="aspect-[4/5] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                       <div className="relative z-10 text-center p-4">
@@ -98,7 +98,8 @@ const InstagramReels = () => {
                       <Button 
                         variant="outline" 
                         size="sm" 
-                        className="w-full border-gray-300 text-gray-700 hover:bg-gray-100 text-xs py-1"
+                        className="w-full text-xs py-1 hover:opacity-80"
+                        style={{ borderColor: '#cbc5b8ff', color: '#4A4A45', backgroundColor: 'transparent' }}
                         onClick={() => window.open(reel.url, '_blank')}
                       >
                         <Instagram className="mr-1" size={12} />
@@ -109,8 +110,8 @@ const InstagramReels = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-8 bg-white border-gray-300 hover:bg-gray-100 w-6 h-6" />
-            <CarouselNext className="hidden md:flex -right-8 bg-white border-gray-300 hover:bg-gray-100 w-6 h-6" />
+            <CarouselPrevious className="hidden md:flex -left-8 w-6 h-6" style={{ backgroundColor: '#EFECE6', borderColor: '#cbc5b8ff' }} />
+            <CarouselNext className="hidden md:flex -right-8 w-6 h-6" style={{ backgroundColor: '#EFECE6', borderColor: '#cbc5b8ff' }} />
           </Carousel>
         </div>
 
@@ -118,7 +119,7 @@ const InstagramReels = () => {
           <Button 
             size="sm" 
             className="text-white px-6 py-2 rounded-full hover:opacity-90"
-            style={{ backgroundColor: '#E91E63' }}
+            style={{ backgroundColor: '#4A4A45' }}
             onClick={() => window.open('https://www.instagram.com/drprathushanerella', '_blank')}
           >
             <Instagram className="mr-2" size={16} />

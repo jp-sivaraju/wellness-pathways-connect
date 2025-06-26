@@ -65,13 +65,13 @@ const Blog = () => {
   );
 
   return (
-    <section id="blog" className="py-20 bg-white">
+    <section id="blog" className="py-20" style={{ backgroundColor: '#EFECE6' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#4A4A45' }}>
             Health & Wellness Blog
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto" style={{ color: '#4A4A45', opacity: 0.8 }}>
             Stay informed with the latest insights on diabetes management, positive psychology, and holistic health practices.
           </p>
         </div>
@@ -81,8 +81,11 @@ const Blog = () => {
             <Button
               key={index}
               variant={index === 0 ? "default" : "outline"}
-              className={index === 0 ? "text-white" : "text-gray-700 hover:bg-gray-100"}
-              style={index === 0 ? { backgroundColor: '#E91E63' } : { borderColor: '#E91E63' }}
+              className={index === 0 ? "text-white" : "hover:opacity-80"}
+              style={index === 0 ? 
+                { backgroundColor: '#4A4A45' } : 
+                { borderColor: '#cbc5b8ff', color: '#4A4A45', backgroundColor: 'transparent' }
+              }
             >
               {category}
             </Button>
@@ -103,7 +106,7 @@ const Blog = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {blogPosts.map((post, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full">
+                  <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full" style={{ backgroundColor: '#EFECE6', borderColor: '#E5E0DF' }}>
                     <div className="relative">
                       <img 
                         src={post.image} 
@@ -111,20 +114,20 @@ const Blog = () => {
                         className="w-full h-48 object-cover"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg" style={{ backgroundColor: '#E91E63' }}>
+                        <span className="text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg" style={{ backgroundColor: '#4A4A45' }}>
                           {post.category}
                         </span>
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                     </div>
                     <CardHeader className="pb-3">
-                      <CardTitle className="text-lg text-gray-900 line-clamp-2 leading-tight">{post.title}</CardTitle>
-                      <CardDescription className="text-gray-600 line-clamp-3 text-sm">
+                      <CardTitle className="text-lg line-clamp-2 leading-tight" style={{ color: '#4A4A45' }}>{post.title}</CardTitle>
+                      <CardDescription className="line-clamp-3 text-sm" style={{ color: '#4A4A45', opacity: 0.8 }}>
                         {post.excerpt}
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="pt-0">
-                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center justify-between text-sm mb-4" style={{ color: '#4A4A45', opacity: 0.7 }}>
                         <div className="flex items-center space-x-2">
                           <Calendar size={14} />
                           <span>{post.date}</span>
@@ -136,9 +139,16 @@ const Blog = () => {
                       </div>
                       <Button 
                         variant="ghost" 
-                        className="w-full text-gray-700 hover:text-white p-3 justify-center hover:shadow-md transition-all duration-300"
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E91E63'}
-                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                        className="w-full p-3 justify-center hover:shadow-md transition-all duration-300"
+                        style={{ color: '#4A4A45' }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = '#4A4A45';
+                          e.currentTarget.style.color = 'white';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'transparent';
+                          e.currentTarget.style.color = '#4A4A45';
+                        }}
                       >
                         Read Full Article
                         <ArrowRight size={16} className="ml-2" />
@@ -148,8 +158,8 @@ const Blog = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-white border-gray-300 hover:bg-gray-100 shadow-lg" />
-            <CarouselNext className="hidden md:flex -right-12 bg-white border-gray-300 hover:bg-gray-100 shadow-lg" />
+            <CarouselPrevious className="hidden md:flex -left-12 shadow-lg" style={{ backgroundColor: '#EFECE6', borderColor: '#cbc5b8ff' }} />
+            <CarouselNext className="hidden md:flex -right-12 shadow-lg" style={{ backgroundColor: '#EFECE6', borderColor: '#cbc5b8ff' }} />
           </Carousel>
         </div>
 
@@ -157,7 +167,7 @@ const Blog = () => {
           <Button 
             size="lg" 
             className="text-white px-8 py-4 rounded-full hover:opacity-90 shadow-lg"
-            style={{ backgroundColor: '#E91E63' }}
+            style={{ backgroundColor: '#4A4A45' }}
           >
             View All Articles
           </Button>
