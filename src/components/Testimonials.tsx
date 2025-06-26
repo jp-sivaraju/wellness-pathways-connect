@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -61,13 +62,13 @@ const Testimonials = () => {
   );
 
   return (
-    <section id="testimonials" className="py-20 transition-all duration-500 hover:bg-opacity-95" style={{ backgroundColor: 'var(--shape-bg)' }}>
+    <section id="testimonials" className="py-20" style={{ backgroundColor: '#F8BBD9' }}>
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 transition-all duration-500 hover:translate-y-2">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4 transition-all duration-300 hover:scale-105" style={{ color: 'var(--shape-text)' }}>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             What My Patients Say
           </h2>
-          <p className="text-xl max-w-3xl mx-auto transition-opacity duration-300 hover:opacity-90" style={{ color: 'var(--shape-text)', opacity: 0.8 }}>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real stories from real people who have transformed their health and lives through our holistic approach.
           </p>
         </div>
@@ -86,20 +87,20 @@ const Testimonials = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2 border-0 shadow-lg h-full bg-white">
+                  <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg h-full bg-white">
                     <CardContent className="p-6 h-full flex flex-col">
                       <div className="flex items-center mb-4">
-                        <div className="p-2 rounded-full mr-3 transition-transform duration-300 hover:scale-110" style={{ backgroundColor: 'var(--clickable-bg)' }}>
-                          <Quote style={{ color: 'var(--shape-text)' }} size={20} />
+                        <div className="p-2 rounded-full mr-3" style={{ backgroundColor: '#FCE4EC' }}>
+                          <Quote className="text-gray-600" size={20} />
                         </div>
                         <div className="flex">
                           {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="text-yellow-400 fill-current transition-transform duration-300 hover:scale-110" size={16} />
+                            <Star key={i} className="text-yellow-400 fill-current" size={16} />
                           ))}
                         </div>
                       </div>
                       
-                      <p className="text-gray-700 mb-6 italic leading-relaxed flex-grow transition-opacity duration-300 hover:opacity-90">
+                      <p className="text-gray-700 mb-6 italic leading-relaxed flex-grow">
                         "{testimonial.testimonial}"
                       </p>
                       
@@ -111,8 +112,8 @@ const Testimonials = () => {
                         <p className="text-sm text-gray-600 font-medium mb-3">
                           Condition: {testimonial.condition}
                         </p>
-                        <div className="p-3 rounded-lg shadow-inner transition-all duration-300 hover:scale-105" style={{ backgroundColor: 'var(--clickable-bg)' }}>
-                          <p className="text-sm font-medium" style={{ color: 'var(--shape-text)' }}>
+                        <div className="p-3 rounded-lg shadow-inner" style={{ backgroundColor: '#FCE4EC' }}>
+                          <p className="text-sm text-gray-700 font-medium">
                             <span className="font-semibold">Outcome:</span> {testimonial.outcome}
                           </p>
                         </div>
@@ -122,27 +123,27 @@ const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-white shadow-lg transition-all duration-300 hover:scale-110" style={{ borderColor: 'var(--shape-border)' }} />
-            <CarouselNext className="hidden md:flex -right-12 bg-white shadow-lg transition-all duration-300 hover:scale-110" style={{ borderColor: 'var(--shape-border)' }} />
+            <CarouselPrevious className="hidden md:flex -left-12 bg-white border-gray-300 hover:bg-gray-100 shadow-lg" />
+            <CarouselNext className="hidden md:flex -right-12 bg-white border-gray-300 hover:bg-gray-100 shadow-lg" />
           </Carousel>
         </div>
 
         <div className="text-center mt-12">
-          <div className="text-white p-8 rounded-2xl max-w-4xl mx-auto shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl" style={{ backgroundColor: 'var(--shape-text)' }}>
+          <div className="text-white p-8 rounded-2xl max-w-4xl mx-auto shadow-xl" style={{ backgroundColor: '#E91E63' }}>
             <h3 className="text-2xl font-bold mb-4">Join Hundreds of Satisfied Patients</h3>
             <p className="text-gray-100 text-lg mb-6">
               Start your journey to better health today with personalized care that addresses your unique needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-8 justify-center">
-              <div className="text-center transition-transform duration-300 hover:scale-110">
+              <div className="text-center">
                 <div className="text-3xl font-bold">500+</div>
                 <div className="text-gray-100">Happy Patients</div>
               </div>
-              <div className="text-center transition-transform duration-300 hover:scale-110">
+              <div className="text-center">
                 <div className="text-3xl font-bold">95%</div>
                 <div className="text-gray-100">Success Rate</div>
               </div>
-              <div className="text-center transition-transform duration-300 hover:scale-110">
+              <div className="text-center">
                 <div className="text-3xl font-bold">4.9/5</div>
                 <div className="text-gray-100">Average Rating</div>
               </div>

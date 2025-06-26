@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -64,13 +65,13 @@ const Blog = () => {
   );
 
   return (
-    <section id="blog" className="py-20 transition-all duration-500 hover:bg-opacity-95" style={{ backgroundColor: 'var(--main-bg)' }}>
+    <section id="blog" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 transition-all duration-500 hover:translate-y-2">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4 transition-all duration-300 hover:scale-105" style={{ color: 'var(--shape-text)' }}>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Health & Wellness Blog
           </h2>
-          <p className="text-xl max-w-3xl mx-auto transition-opacity duration-300 hover:opacity-90" style={{ color: 'var(--shape-text)', opacity: 0.8 }}>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Stay informed with the latest insights on diabetes management, positive psychology, and holistic health practices.
           </p>
         </div>
@@ -80,11 +81,8 @@ const Blog = () => {
             <Button
               key={index}
               variant={index === 0 ? "default" : "outline"}
-              className={`transition-all duration-300 hover:scale-105 ${index === 0 ? "text-white" : "hover:opacity-80"}`}
-              style={index === 0 ? 
-                { backgroundColor: 'var(--shape-text)' } : 
-                { borderColor: 'var(--shape-border)', color: 'var(--shape-text)', backgroundColor: 'transparent' }
-              }
+              className={index === 0 ? "text-white" : "text-gray-700 hover:bg-gray-100"}
+              style={index === 0 ? { backgroundColor: '#E91E63' } : { borderColor: '#E91E63' }}
             >
               {category}
             </Button>
@@ -105,28 +103,28 @@ const Blog = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {blogPosts.map((post, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2 overflow-hidden h-full" style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
+                  <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full">
                     <div className="relative">
                       <img 
                         src={post.image} 
                         alt={post.title}
-                        className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                        className="w-full h-48 object-cover"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg transition-all duration-300 hover:scale-105" style={{ backgroundColor: 'var(--shape-text)' }}>
+                        <span className="text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg" style={{ backgroundColor: '#E91E63' }}>
                           {post.category}
                         </span>
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                     </div>
                     <CardHeader className="pb-3">
-                      <CardTitle className="text-lg line-clamp-2 leading-tight transition-colors duration-300 hover:opacity-80" style={{ color: 'var(--shape-text)' }}>{post.title}</CardTitle>
-                      <CardDescription className="line-clamp-3 text-sm" style={{ color: 'var(--shape-text)', opacity: 0.8 }}>
+                      <CardTitle className="text-lg text-gray-900 line-clamp-2 leading-tight">{post.title}</CardTitle>
+                      <CardDescription className="text-gray-600 line-clamp-3 text-sm">
                         {post.excerpt}
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="pt-0">
-                      <div className="flex items-center justify-between text-sm mb-4" style={{ color: 'var(--shape-text)', opacity: 0.7 }}>
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                         <div className="flex items-center space-x-2">
                           <Calendar size={14} />
                           <span>{post.date}</span>
@@ -138,35 +136,28 @@ const Blog = () => {
                       </div>
                       <Button 
                         variant="ghost" 
-                        className="w-full p-3 justify-center transition-all duration-300 hover:scale-105 hover:shadow-md"
-                        style={{ color: 'var(--shape-text)' }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = 'var(--shape-text)';
-                          e.currentTarget.style.color = 'white';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = 'transparent';
-                          e.currentTarget.style.color = 'var(--shape-text)';
-                        }}
+                        className="w-full text-gray-700 hover:text-white p-3 justify-center hover:shadow-md transition-all duration-300"
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E91E63'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                       >
                         Read Full Article
-                        <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                        <ArrowRight size={16} className="ml-2" />
                       </Button>
                     </CardContent>
                   </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 shadow-lg transition-all duration-300 hover:scale-110" style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--shape-border)' }} />
-            <CarouselNext className="hidden md:flex -right-12 shadow-lg transition-all duration-300 hover:scale-110" style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--shape-border)' }} />
+            <CarouselPrevious className="hidden md:flex -left-12 bg-white border-gray-300 hover:bg-gray-100 shadow-lg" />
+            <CarouselNext className="hidden md:flex -right-12 bg-white border-gray-300 hover:bg-gray-100 shadow-lg" />
           </Carousel>
         </div>
 
         <div className="text-center mt-12">
           <Button 
             size="lg" 
-            className="text-white px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            style={{ backgroundColor: 'var(--shape-text)' }}
+            className="text-white px-8 py-4 rounded-full hover:opacity-90 shadow-lg"
+            style={{ backgroundColor: '#E91E63' }}
           >
             View All Articles
           </Button>

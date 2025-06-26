@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -61,26 +60,26 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white transition-all duration-500 hover:bg-opacity-95">
+    <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 transition-all duration-500 hover:translate-y-2">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 transition-all duration-300 hover:scale-105">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Get in Touch
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto transition-opacity duration-300 hover:opacity-90">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to start your journey to better health? Schedule a consultation or reach out with any questions.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          <div className="transition-all duration-500 hover:translate-x-2">
+          <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="border-l-4 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md" style={{ borderLeftColor: 'var(--shape-text)' }}>
+                <Card key={index} className="border-l-4 shadow-sm" style={{ borderLeftColor: '#E91E63' }}>
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
+                      <div className="flex-shrink-0">
                         {info.icon}
                       </div>
                       <div>
@@ -98,22 +97,22 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="mt-8 p-6 rounded-xl text-white transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: 'var(--shape-text)' }}>
+            <div className="mt-8 p-6 rounded-xl text-white" style={{ background: 'linear-gradient(135deg, #E91E63 0%, #AD1457 100%)' }}>
               <h4 className="text-xl font-bold mb-4">Why Choose Dr. Prathusha?</h4>
               <ul className="space-y-2">
-                <li className="flex items-center transition-all duration-300 hover:translate-x-2">
+                <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
                   Personalized holistic approach
                 </li>
-                <li className="flex items-center transition-all duration-300 hover:translate-x-2">
+                <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
                   Evidence-based treatment methods
                 </li>
-                <li className="flex items-center transition-all duration-300 hover:translate-x-2">
+                <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
                   Comprehensive diabetes care
                 </li>
-                <li className="flex items-center transition-all duration-300 hover:translate-x-2">
+                <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
                   Positive psychology integration
                 </li>
@@ -121,8 +120,8 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="transition-all duration-500 hover:translate-x-2">
-            <Card className="shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <div>
+            <Card className="shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-gray-900">Send a Message</CardTitle>
                 <CardDescription>
@@ -143,7 +142,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder="Enter your full name"
-                        className="w-full transition-all duration-300 hover:scale-105 focus:scale-105"
+                        className="w-full"
                       />
                     </div>
                     <div>
@@ -157,7 +156,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder="Enter your phone number"
-                        className="w-full transition-all duration-300 hover:scale-105 focus:scale-105"
+                        className="w-full"
                       />
                     </div>
                   </div>
@@ -173,7 +172,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder="Enter your email address"
-                      className="w-full transition-all duration-300 hover:scale-105 focus:scale-105"
+                      className="w-full"
                     />
                   </div>
 
@@ -187,7 +186,7 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="What is this regarding?"
-                      className="w-full transition-all duration-300 hover:scale-105 focus:scale-105"
+                      className="w-full"
                     />
                   </div>
 
@@ -202,18 +201,18 @@ const Contact = () => {
                       required
                       placeholder="Tell us about your health concerns or questions..."
                       rows={5}
-                      className="w-full transition-all duration-300 hover:scale-105 focus:scale-105"
+                      className="w-full"
                     />
                   </div>
 
                   <Button 
                     type="submit" 
-                    className="w-full text-white py-3 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                    style={{ backgroundColor: 'var(--shape-text)' }}
+                    className="w-full text-white py-3 hover:opacity-90"
+                    style={{ backgroundColor: '#E91E63' }}
                     size="lg"
                   >
                     Send Message
-                    <Send className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
+                    <Send className="ml-2" size={20} />
                   </Button>
                 </form>
               </CardContent>
