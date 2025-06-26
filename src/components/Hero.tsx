@@ -19,10 +19,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="py-20" style={{ backgroundColor: '#FCE4EC' }}>
+    <section id="home" className="py-20 animate-fade-in" style={{ backgroundColor: '#FCE4EC' }}>
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+          <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 Transform Your Health with 
@@ -36,17 +36,17 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="text-white px-8 py-4 rounded-full hover:opacity-90"
+                className="text-white px-8 py-4 rounded-full btn-animate hover-bounce group transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                 style={{ backgroundColor: '#E91E63' }}
                 onClick={handleConsultationClick}
               >
                 Book Consultation
-                <ArrowRight className="ml-2" size={20} />
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={20} />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-gray-600 text-gray-700 hover:bg-gray-100 px-8 py-4 rounded-full"
+                className="border-gray-600 text-gray-700 hover:bg-gray-100 px-8 py-4 rounded-full hover-lift transition-all duration-300"
                 onClick={handleLearnMoreClick}
               >
                 Learn More
@@ -54,23 +54,23 @@ const Hero = () => {
             </div>
 
             <div className="grid grid-cols-3 gap-8 pt-8">
-              <div className="text-center">
+              <div className="text-center hover-scale animate-scale-in" style={{ animationDelay: '0.2s' }}>
                 <div className="flex justify-center mb-2">
-                  <Heart className="text-gray-600" size={32} />
+                  <Heart className="text-gray-600 transition-colors duration-300 hover:text-red-500" size={32} />
                 </div>
                 <div className="text-2xl font-bold text-gray-900">500+</div>
                 <div className="text-sm text-gray-600">Happy Patients</div>
               </div>
-              <div className="text-center">
+              <div className="text-center hover-scale animate-scale-in" style={{ animationDelay: '0.4s' }}>
                 <div className="flex justify-center mb-2">
-                  <Users className="text-gray-600" size={32} />
+                  <Users className="text-gray-600 transition-colors duration-300 hover:text-blue-500" size={32} />
                 </div>
                 <div className="text-2xl font-bold text-gray-900">5+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>
               </div>
-              <div className="text-center">
+              <div className="text-center hover-scale animate-scale-in" style={{ animationDelay: '0.6s' }}>
                 <div className="flex justify-center mb-2">
-                  <Award className="text-gray-600" size={32} />
+                  <Award className="text-gray-600 transition-colors duration-300 hover:text-yellow-500" size={32} />
                 </div>
                 <div className="text-2xl font-bold text-gray-900">100%</div>
                 <div className="text-sm text-gray-600">Success Rate</div>
@@ -78,13 +78,13 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="lg:pl-12">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-3xl transform rotate-3" style={{ backgroundColor: '#E91E63' }}></div>
-              <div className="relative bg-white p-8 rounded-3xl shadow-xl">
-                <div className="w-full h-96 rounded-2xl flex items-center justify-center" style={{ backgroundColor: '#F8BBD9' }}>
+          <div className="lg:pl-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="relative hover-lift">
+              <div className="absolute inset-0 rounded-3xl transform rotate-3 transition-transform duration-300 hover:rotate-6" style={{ backgroundColor: '#E91E63' }}></div>
+              <div className="relative bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <div className="w-full h-96 rounded-2xl flex items-center justify-center hover-scale" style={{ backgroundColor: '#F8BBD9' }}>
                   <div className="text-center">
-                    <div className="w-32 h-32 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: '#E91E63' }}>
+                    <div className="w-32 h-32 rounded-full mx-auto mb-4 flex items-center justify-center hover-bounce" style={{ backgroundColor: '#E91E63' }}>
                       <span className="text-white text-4xl font-bold">PN</span>
                     </div>
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Dr. Prathusha Nerella</h3>
