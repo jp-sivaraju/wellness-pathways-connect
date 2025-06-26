@@ -11,7 +11,7 @@ import Contact from '@/components/Contact';
 
 const Index = () => {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#EFECE6' }}>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--main-bg)' }}>
       <Header />
       <Hero />
       <About />

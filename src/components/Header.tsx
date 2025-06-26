@@ -24,17 +24,17 @@ const Header = () => {
   };
 
   return (
-    <header style={{ backgroundColor: '#EFECE6' }} className="shadow-sm sticky top-0 z-50 border-b" style={{ backgroundColor: '#EFECE6', borderBottomColor: '#cbc5b8ff' }}>
+    <header className="shadow-sm sticky top-0 z-50 border-b transition-all duration-300 hover:shadow-md" style={{ backgroundColor: 'var(--main-bg)', borderBottomColor: 'var(--line-color)' }}>
       <div className="container mx-auto px-4">
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style={{ backgroundColor: '#4A4A45' }}>
+          <div className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
+            <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg transition-all duration-300 hover:shadow-lg" style={{ backgroundColor: 'var(--shape-text)' }}>
               PN
             </div>
             <div>
-              <h1 className="text-xl font-bold" style={{ color: '#4A4A45' }}>Dr. Prathusha Nerella</h1>
-              <p className="text-sm" style={{ color: '#4A4A45', opacity: 0.8 }}>MBBS, MD - Diabetes & Lifestyle Expert</p>
+              <h1 className="text-xl font-bold transition-colors duration-300" style={{ color: 'var(--shape-text)' }}>Dr. Prathusha Nerella</h1>
+              <p className="text-sm" style={{ color: 'var(--shape-text)', opacity: 0.8 }}>MBBS, MD - Diabetes & Lifestyle Expert</p>
             </div>
           </div>
 
@@ -44,8 +44,8 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="transition-colors font-medium cursor-pointer hover:opacity-80"
-                style={{ color: '#4A4A45' }}
+                className="transition-all duration-300 font-medium cursor-pointer hover:opacity-80 hover:scale-105 hover:shadow-sm px-2 py-1 rounded"
+                style={{ color: 'var(--shape-text)' }}
               >
                 {item.name}
               </button>
@@ -56,9 +56,9 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden transition-all duration-300 hover:scale-110"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            style={{ color: '#4A4A45' }}
+            style={{ color: 'var(--shape-text)' }}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
@@ -66,14 +66,14 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t" style={{ borderTopColor: '#cbc5b8ff' }}>
+          <nav className="md:hidden py-4 border-t animate-fade-in" style={{ borderTopColor: 'var(--line-color)' }}>
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="transition-colors font-medium text-left cursor-pointer hover:opacity-80"
-                  style={{ color: '#4A4A45' }}
+                  className="transition-all duration-300 font-medium text-left cursor-pointer hover:opacity-80 hover:translate-x-2 px-2 py-1 rounded"
+                  style={{ color: 'var(--shape-text)' }}
                 >
                   {item.name}
                 </button>
